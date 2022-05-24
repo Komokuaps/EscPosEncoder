@@ -209,7 +209,7 @@ class EscPosEncoder {
     */
   _encode(value) {
     if (this._codepage != 'auto') {
-      return CodepageEncoder.encode(value, this._codepage);
+      return CodepageEncoder.encode(this._codepage, value);
     }
 
     let codepages;
@@ -339,8 +339,6 @@ class EscPosEncoder {
   }
 
 
-
-  
   /**
      * Initialize the printer
      *
